@@ -1,7 +1,7 @@
 # kinduct-codeigniter-api-test
 My stab at writing a transformer based API service because... why not?
 
-#Installation
+# Installation
 * Clone the repository 
 
 ``git clone https://github.com/sonoftheweb/kinduct-codeigniter-api-test.git``
@@ -29,7 +29,7 @@ My stab at writing a transformer based API service because... why not?
     
     CI_ENCRYPTION_KEY: remove the ``#`` sign and set an encryption key
     
-#About the app
+### About the app
 The API is built around Codeigniter and utilizes a much more "code reusable" approach. Each
 resource is basically a model (database table). As such because the app might have multiple 
 resources, it would be best to use one set of routes to not only call any resource, but also
