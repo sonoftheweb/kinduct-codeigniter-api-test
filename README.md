@@ -4,12 +4,12 @@ My stab at writing a transformer based API service because... why not?
 # Installation
 * Clone the repository 
 
-``git clone https://github.com/sonoftheweb/kinduct-codeigniter-api-test.git``
+    ``git clone https://github.com/sonoftheweb/kinduct-codeigniter-api-test.git``
 
 * Run composer install. This installs all the required packages and one that helps me define setup .env 
 (environment variables) file for safeguarding sensitive data. Note that the env example file is in the app folder.
 
-``composer install``
+    ``composer install``
 
 * Setup a MySQL database
 
