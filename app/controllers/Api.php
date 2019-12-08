@@ -117,7 +117,7 @@ class API extends CI_Controller {
 		$mapping = array(
 			'players' => array(
 				'model' => 'players',
-				'library' => 'playerstransformer', // Built our very own transformer system to filter data that is being sent out
+				'library' => 'api/playerstransformer', // Built our very own transformer system to filter data that is being sent out
 				'isSmart' => true,
 			),
 		);
