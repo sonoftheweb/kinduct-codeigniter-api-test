@@ -57,7 +57,7 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['api/(:any)']['post'] = 'api/createItem/$1';
 $route['api/(:any)/(:num)']['post'] = 'api/updateItem/$1/$2';
-$route['api/(:any)/(:num)']['delete'] = 'api/deleteItem/$1/$2';
+$route['api/(:any)/(:num)/delete']['post'] = 'api/deleteItem/$1/$2';
 $route['api/(:any)']['get'] = 'api/getCollection/$1';
 $route['api/(:any)/(:num)']['get'] = 'api/getItem/$1/$2';
 

@@ -8,12 +8,7 @@ class PlayersList extends Component{
 	};
 
 	componentDidMount() {
-		let endpoint = 'players';
-		ApiService.apiGet(endpoint)
-			.then(res => {
-				let players = res.data.data;
-				this.setState({ players });
-			})
+		this.getPlayers();
 	}
 
 	render() {
@@ -32,7 +27,7 @@ class PlayersList extends Component{
 					</thead>
 					<tbody>
 
-						{this.state.players.map(function(player, index) {
+						{this.state.players.map((player, index) => {
 							return (
 								<tr key={index}>
 									<td>{player.name}</td>
@@ -40,7 +35,7 @@ class PlayersList extends Component{
 									<td>{player.city + ', ' + player.province }</td>
 									<td className="actions">
 										<Link to={`/players/${player.id}`}>View</Link>
-										<a>Delete</a>
+										<a onClick={e => { e.preventDefault(); this.deletePlayer(player.id)}} href="/">Delete</a>
 									</td>
 								</tr>
 							)
@@ -51,6 +46,22 @@ class PlayersList extends Component{
 			</div>
 		);
 	}
+
+	getPlayers = () => {
+		let endpoint = 'players';
+		ApiService.apiGet(endpoint)
+			.then(res => {
+				let players = res.data.data;
+				this.setState({ players });
+			})
+	};
+
+	deletePlayer = (id) => {
+		 ApiService.apiPost('players/' + id + '/delete')
+			.then(res => {
+				this.getPlayers();
+			});
+	};
 }
 
 export default PlayersList;
