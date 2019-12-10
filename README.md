@@ -29,7 +29,18 @@ My stab at writing a transformer based API service because... why not?
     
     CI_ENCRYPTION_KEY: remove the ``#`` sign and set an encryption key
     
-### About the app
+* In terminal, enter the ``web-app`` folder and run npm install
+    
+    ``cd web-app && npm install``
+    
+* While still within the ``web-app`` folder run ``npm start`` to start up the react application
+    
+    ``npm start``
+
+Please note that this is not a production ready implementation. Deployment would require setup with Webpack and that is 
+outside the scope of the test.
+
+### About the app (backend)
 The API is built around Codeigniter and utilizes a much more "code reusable" approach. Each
 resource is basically a model (database table). As such because the app might have multiple 
 resources, it would be best to use one set of routes to not only call any resource, but also
