@@ -1,0 +1,67 @@
+@import "_variables.scss";
+
+/***********************Fonts START***********************/
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700&display=swap');
+/***********************Fonts END***********************/
+
+/***********************Bootstrap based stuff START***********************/
+
+body {
+	background-color: $body-bg !important;
+	margin: 0;
+	font-family: 'Lato', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 15px !important;
+}
+
+.bg-light {
+	background-color: #f7f8f8 !important;
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: $nav-tabs-link-active-color !important;
+}
+
+.borderless td, .borderless th {
+	border: none !important;
+}
+
+/***********************Bootstrap based stuff END***********************/
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: $primary;
+  min-height: 64px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.player-table {
+	max-width: 500px !important;
+	width: 50% !important;
+}
+
+.actions a {
+	margin-left: 20px;
+	text-transform: uppercase;
+	text-decoration: none !important;
+}
